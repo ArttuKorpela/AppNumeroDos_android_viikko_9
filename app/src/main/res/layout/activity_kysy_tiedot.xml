@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rgKuva"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00F44336"
+    android:backgroundTint="#00E91E63"
+    tools:context=".KysyTiedotActivity">
+
+    <EditText
+        android:id="@+id/editTextEtunimi"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Etunimi"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextSukunimi"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Sukunimi"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEtunimi" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Sähköpostiosoite"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSukunimi" />
+
+    <RadioGroup
+        android:id="@+id/rgAlat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail">
+
+        <RadioButton
+            android:id="@+id/rbTite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tietotekniikka" />
+
+        <RadioButton
+            android:id="@+id/rbTuta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tuotantotalous" />
+
+        <RadioButton
+            android:id="@+id/rbSate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sähkötekniikka" />
+
+        <RadioButton
+            android:id="@+id/rbLate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Laskennallinen tekniikka" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnLuominen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:onClick="addUser"
+        android:text="Luo uusi käyttäjä"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgKuvat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnLuominen"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbKuva1"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rbKuva2"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageKuva1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/rgKuvat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgAlat"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+    <ImageView
+        android:id="@+id/imageKuva2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="90dp"
+        android:background="#F44336"
+        app:layout_constraintBottom_toTopOf="@+id/rgKuvat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toEndOf="@+id/imageKuva1"
+        app:layout_constraintTop_toBottomOf="@+id/rgAlat"
+        app:layout_constraintVertical_bias="0.476"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
